@@ -1,0 +1,45 @@
+{
+  "pages": [
+      "page/home/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "京东",
+    "navigationBarBackgroundColor": "#fbf9fe",
+    "backgroundColor": "#fbf9fe"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "page/home/index",
+      "iconPath": "image/home.png",
+      "selectedIconPath": "image/home-hl.png"
+    }, {
+      "pagePath": "page/category/index",
+      "iconPath": "image/category.png",
+      "selectedIconPath": "image/category-hl.png"
+    }, {
+      "pagePath": "page/explore/index",
+      "iconPath": "image/explore.png",
+      "selectedIconPath": "image/explore-hl.png"
+    }, {
+      "pagePath": "page/cart/index",
+      "iconPath": "image/cart.png",
+      "selectedIconPath": "image/cart-hl.png"
+    }, {
+      "pagePath": "page/me/index",
+      "iconPath": "image/me.png",
+      "selectedIconPath": "image/me-hl.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

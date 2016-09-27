@@ -1,0 +1,65 @@
+<view class="page">
+    <view class="search">
+        <view class="scan">
+            <image class="widgets-img" src="/image/ai3.png" mode="aspectFit" />
+        </view>
+        <view class="search-input">
+            <image class="search-icon" src="/image/ath.png" mode="aspectFit" />
+            <input class="serach-text" placeholder="搜索商品" />
+        </view>
+        <view class="scan">
+            <image class="widgets-img" src="/image/ahv.png" mode="aspectFit" />
+        </view>
+    </view>
+    <scroll-view scroll-y="true" style="height: 100%; width: 100%; display: flex; flex-direction: column; margin-top:20rpx">
+        <view style="width: 100%; height: auto; margin-bottom:10px;">
+            <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="width:100%;height:365rpx;">
+                <block wx:for-items="{{swipers}}">
+                    <swiper-item>
+                        <image class="swiper-item" src="{{item.image}}" mode="aspectFill"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+        <view class="big-logo">
+            <block wx:for-items="{{logos}}">
+                <view class="logoinfo">
+                    <image style="width:100rpx; height: 100rpx;" src="{{item.image}}" mode="aspectFit"/>
+                    <text class="logotext">{{item.title}}</text>
+                </view>
+            </block>
+        </view>
+        <view class="page-margin page-column">
+            <view class="page-row" style="width:100%;justify-content:space-between">
+                <image style="width:180rpx;height:40rpx;margin-left:0px" src="/image/bej.png" mode="aspectFill" />
+                <view style="height:40rpx;">
+                    <text style="margin-right: 2px; font-size:4rpx;">更多秒杀</text>
+                    <image style="width: 22rpx; height:22rpx;margin-top:0px;" src="/image/arrowright.png" mode="aspectFill" />
+                </view>
+            </view>
+            <scroll-view scroll-x="true" style="width:100%; margin-top:10rpx;white-space: nowrap;">
+                <block wx:for-items="{{quicks}}">
+                    <view style="display: inline-block;">
+                        <view class="page-column" style="padding:20rpx;">
+                            <image style="width:170rpx;height:170rpx;" src="{{item.image}}" mode="aspectFill"/>
+                            <text style="font-size:32rpx;color:#FF0000; margin-top:10rpx;">{{item.price}}</text>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+            <view class="draw__line"></view>
+            <view class="page-row" style="justify-content:center">
+                <image style="width:240rpx;height:292rpx;" src="/image/ad-0.jpg" mode="aspectFill"/>
+                <image style="width:240rpx;height:292rpx;" src="/image/ad-big.jpg" mode="aspectFill"/>
+                <image style="width:240rpx;height:292rpx;" src="/image/ad-1.jpg" mode="aspectFill"/>
+            </view>
+            <view class="page-row" style="justify-content:center">
+                <image style="width:360rpx;height:202rpx;" src="/image/ad-left.jpg" mode="aspectFill"/>
+                <image style="width:360rpx;height:202rpx;" src="/image/ad-right.jpg" mode="aspectFill"/>
+            </view>
+        </view>
+
+    </scroll-view>
+</view>
